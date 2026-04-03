@@ -20,5 +20,11 @@ app.get("/users",(req,res)=>{
     res.send(html)
 })
 
+app.get("/api/users/:id",(req,res)=>{
+    const userdata= data.find((u)=> u.id=== Number(req.params.id))
+
+    return res.json(userdata)
+})
+
 
 app.listen(port,()=>console.log(`Server is running on port: ${port}`))
