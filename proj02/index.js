@@ -5,7 +5,7 @@ const data= require("./data.json")
 const app= express();
 const fs= require('fs')
 
-app.use(express.urlencoded({extended:"false"}))
+app.use(express.urlencoded({extended: false}))
 app.get("/api/users",(req,res)=>{
 
     res.json(data)
